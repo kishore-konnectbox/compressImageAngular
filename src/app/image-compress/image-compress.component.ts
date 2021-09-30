@@ -51,7 +51,7 @@ export class ImageCompressComponent implements OnInit {
           const imageName = fileName;
           // call method that creates a blob from dataUri
           const imageBlob = this.dataURItoBlob(this.imgResultAfterCompress.split(',')[1]);
-          const imageFile = new File([result], imageName, { type: 'image/jpeg' });
+          const imageFile = new File([imageBlob], imageName, { type: 'image/jpeg' });
           console.log("file size:",imageFile['size']/(1024*1024));
         }
       );
